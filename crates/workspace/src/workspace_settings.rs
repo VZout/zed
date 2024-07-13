@@ -14,6 +14,7 @@ pub struct WorkspaceSettings {
     pub restore_on_startup: RestoreOnStartupBehaviour,
     pub drop_target_size: f32,
     pub when_closing_with_no_tabs: CloseWindowWhenNoItems,
+    pub show_status_bar: bool,
 }
 
 #[derive(Copy, Clone, Default, Serialize, Deserialize, JsonSchema)]
@@ -83,6 +84,10 @@ pub struct WorkspaceSettingsContent {
     ///
     /// Default: auto ("on" on macOS, "off" otherwise)
     pub when_closing_with_no_tabs: Option<CloseWindowWhenNoItems>,
+    /// Whether to status bar is shown
+    ///
+    /// Default: true
+    pub show_status_bar: Option<bool>,
 }
 
 #[derive(Deserialize)]
